@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+                <style>.lw { font-size: 60px; font-family: Arial, Helvetica, sans-serif; }</style>
+            </head>
+            <body>
+                
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachillerato de Investigación - Pedro Guillén</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,600&amp;family=Victor+Mono:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rosa-fondo-top: #ff007f;
+            --rosa-fondo-bottom: #8a0044;
+            --color-texto-caja: #1a1a1a;
+            --color-acentos: #00f2ff;
+            --fuente-titulos: 'Victor Mono', monospace;
+            --fuente-cuerpo: 'Jost', sans-serif;
+            --fondo-caja: rgba(255, 255, 255, 0.96);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto-caja);
+            line-height: 1.6;
+            background: linear-gradient(180deg, var(--rosa-fondo-top) 0%, var(--rosa-fondo-bottom) 100%);
+            background-attachment: fixed;
+            padding-bottom: 5rem;
+        }
+
+        /* --- Cabecera Blanca --- */
+        .cabecera-logo {
+            background: white;
+            padding: 1.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 3rem;
+        }
+
+        .logo-externo {
+            display: block;
+            height: 100px;
+            max-width: 90%;
+            object-fit: contain;
+        }
+
+        /* --- Contenedor Principal --- */
+        .contenedor-web {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 0 1.5rem;
+        }
+
+        .titulo-principal {
+            font-family: var(--fuente-titulos);
+            color: #ffffff;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 4px 4px 0px var(--color-acentos);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Cajones Estilo Markdown --- */
+        .caja-markdown {
+            background-color: var(--fondo-caja);
+            width: 100%;
+            padding: 2.5rem 3rem;
+            border-radius: 4px;
+            box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .caja-markdown h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.8rem;
+            color: #000;
+            border-left: 8px solid var(--rosa-fondo-top);
+            padding-left: 1.2rem;
+            margin-left: -3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            display: flex; /* Para alinear icono y texto */
+            align-items: center;
+            gap: 1rem; /* Espacio entre icono y texto */
+        }
+
+        /* Estilo para el icono SVG */
+        .icono-titulo {
+            width: 1.5em; /* Tamaño relativo al texto */
+            height: 1.5em;
+            display: inline-block;
+        }
+
+        .caja-markdown h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.3rem;
+            color: var(--rosa-fondo-bottom);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .caja-markdown p {
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            hyphens: auto; /* Permite guiones automáticos para evitar huecos */
+        }
+
+        .caja-markdown ul, .caja-markdown ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .caja-markdown li {
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        .caja-markdown strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        /* --- Cronograma --- */
+        .paso-tiempo {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+            display: flex;
+            gap: 15px;
+        }
+        .fecha {
+            font-family: var(--fuente-titulos);
+            font-weight: bold;
+            color: var(--rosa-fondo-top);
+            min-width: 120px;
+        }
+
+        footer {
+            font-family: var(--fuente-titulos);
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Ajustes para móviles */
+        @media (max-width: 600px) {
+            .caja-markdown {
+                padding: 1.5rem; 
+            }
+            
+            .caja-markdown h1 {
+                margin-left: -1.5rem; 
+                font-size: 1.4rem;    
+            }
+
+            .caja-markdown p {
+                text-align: left; /* Evita los "ríos" de espacio en pantallas estrechas */
+            }
+
+            .titulo-principal {
+                font-size: 1.8rem;    
+            }
+
+            .paso-tiempo {
+                flex-direction: column; 
+                gap: 5px;
+            }
+        }
+    </style>
+
+
+
+    <header class="cabecera-logo">
+        <img class="logo-externo" src="https://iesdrpedroguillen.es/wp-content/uploads/2021/02/Logo_Completo_IES_Dr_Pedro_Guillen.png" alt="Logo IES Pedro Guillén">
+    </header>
+
+    <main class="contenedor-web">
+        
+        <h1 class="titulo-principal">Bachillerato de Investigación en el Pedro Guillén</h1>
+
+        <article class="caja-markdown">
+            <h1>
+                <img src="https://www.svgrepo.com/show/340280/face-cool.svg" alt="Icono Face Cool" class="icono-titulo">
+                # ¿Qué es?
+            </h1>
+            <p>Es una modalidad dirigida a alumnos motivados por profundizar en cualquier campo del conocimiento, te guste lo que te guste. ¿Te gustan las ciencias? <strong>Las tenemos.</strong> ¿Las humanidades? <strong>La duda ofende.</strong> ¿Las...? <strong>Por supuesto que sí. </strong> </p>
+            <p>A diferencia del bachillerato ordinario, aquí cursarás la asignatura de <strong>Metodología de la Investigación</strong> y realizarás un <strong>proyecto de investigación</strong> original que defenderás públicamente.</p>
+            <p>No te preocupes, ¡no estás solo! Tendrás a muchos profesores y compañeros encantados de apoyarte y enseñarte. </p>
+        </article>
+
+        <article class="caja-markdown">
+            <h1><img src="https://www.svgrepo.com/show/340294/favorite.svg" alt="Icono Favorite" class="icono-titulo"># ¿Qué tiene de especial?</h1>
+            <p>A diferencia de un Bachillerato ordinario, aquí tendrás la oportunidad de hacer <strong>investigación real </strong> a lo largo de los dos cursos. Seamos más exactos.</p>
+            <h2>## Primero de Bachillerato</h2>
+            <p>Empezarás a trabajar en grupo con investigadores de universidad y centros superiores en el <strong>Programa Prometeo</strong>, y también comenzarás tu propio <strong>proyecto de investigación de Bachillerato</strong>.</p>
+            <h2>## Segundo de Bachillerato</h2>
+            <p>Continuarás y expondrás el proyecto que empezaste en primero, y podrás participar en certámenes de investigación regionales y nacionales como <strong>INJUVE</strong>, <strong>Urania</strong> o el <strong>Premio Don Bosco</strong>.</p>
+        </article>
+
+        <article class="caja-markdown">
+            <h1><img src="https://www.svgrepo.com/show/341224/trophy.svg" alt="Icono Trophy" class="icono-titulo"># ¿Para qué? ¿Me renta?</h1>
+            <p>Es un esfuerzo extra, pero hay muchas recompensas:</p>
+            <ul>
+                <li><strong>Nivel académico:</strong> llegarás a la universidad con una base de investigación que otros no tienen.</li>
+                <li><strong>Currículum:</strong> obtendrás tu identificación oficial como investigador y tu primera publicación oficial (¡de muchas por venir!).</li>
+                <li><strong>Reconocimiento:</strong> se tendrá muy en cuenta tu esfuerzo en la nota académica.</li>
+                <li><strong>Premios:</strong> los certámenes ofrecen jugosos premios en metálico (hablamos de <em>miles de euros </em> en varios de ellos).</li>
+                <li><strong>Experiencias:</strong> viajes, charlas y buen rollo.</li>
+            </ul>
+        </article>
+
+        <article class="caja-markdown">
+            <h1>
+                <img src="https://www.svgrepo.com/show/340405/help.svg" alt="Icono Help" class="icono-titulo">
+                # Sigo teniendo dudas
+            </h1>
+            <p>¡No te preocupes, es normal! Puedes contactar con cualquier miembro del equipo de Investigación:</p>
+    
+    <ul style="list-style-type: '» '; margin-bottom: 8px;">
+        <li>Coordinadores de la modalidad: <strong>Fina o Paco.</strong></li>
+        <li>Profesores de Metodología: <strong>Ana, Fermín o JuanBa.</strong></li>
+    </ul>
+
+    <p>
+        O escribirnos a 
+        <a href="mailto:coordbi@iesdrpedroguillen.es" style="color: var(--rosa-fondo-top); font-family: var(--fuente-titulos); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--color-acentos);">coordbi@iesdrpedroguillen.es</a>. 
+        Estaremos encantados de ayudarte.
+    </p>
+        </article> 
+
+        <footer>
+            IES DR. PEDRO GUILLÉN • COORDINACIÓN DEL BACHILLERATO DE INVESTIGACIÓN • 2026
+        </footer>
+
+    </main>
+
+
+
+                <script>// Write JavaScript here</script>
+            
+        
+    </body>
